@@ -1,0 +1,53 @@
+@startuml
+skinparam actorStyle awesome
+
+' Actor definition
+actor User
+
+' Usecase definition
+usecase (Registro) as uc_register
+usecase (Login) as uc_login
+usecase (Logout) as uc_logout
+usecase (Repera \nPassword) as uc_password_recover
+usecase (My Profile) as uc_my_profile
+usecase (Dashboard \nUsuário) as uc_dashboard_user
+usecase (Gerenciar meus Processos) as uc_manage_process
+usecase (Buscar Processo) as uc_search_process
+usecase (Listar Processos) as uc_list_process
+usecase (Selecionar Processo) as uc_select_process
+usecase (Visualizar Dados \ndo Processo) as uc_view_process_data
+usecase (Gerar Resumo \ndo Processo) as uc_generate_process_summary
+usecase (Visualizar Resumo \ndo Processo) as uc_view_process_summary
+usecase (Salvar Resumos \ndo Processo) as uc_save_process_summary
+usecase (Listar meus \nResumos de Processos) as uc_list_private_process_summary
+usecase (Deletar Resumo \nde Processo Processo) as uc_delete_private_process_summary
+usecase (Selecionar Resumo \nde Processo) as uc_select_private_process_summary
+usecase (Visualizar Resumo \nde Processo) as uc_view_private_process_summary
+usecase (Pesquisar meus \nResumos de Processos) as uc_search_private_process_summary
+usecase (Listar Resultados \ndos Resumos dos \nmeus Processo) as uc_list_result_processos_summary
+
+uc_dashboard_user -> uc_manage_process
+uc_manage_process --> uc_search_process
+uc_search_process --> uc_list_process
+uc_list_process --> uc_select_process
+uc_select_process --> uc_view_process_data
+uc_view_process_data --> uc_generate_process_summary
+uc_generate_process_summary --> uc_view_process_summary
+uc_view_process_summary --> uc_save_process_summary
+uc_manage_process --> uc_list_private_process_summary
+uc_manage_process --> uc_search_private_process_summary
+uc_search_private_process_summary --> uc_list_result_processos_summary
+uc_list_result_processos_summary --> uc_select_private_process_summary
+uc_list_private_process_summary --> uc_select_private_process_summary
+uc_select_private_process_summary --> uc_delete_private_process_summary
+uc_select_private_process_summary --> uc_view_private_process_summary 
+
+uc_register <- User
+User -> uc_password_recover
+User --> uc_login
+uc_login --> uc_dashboard_user
+
+uc_dashboard_user --> uc_logout
+uc_dashboard_user -left-> uc_my_profile
+
+@enduml
