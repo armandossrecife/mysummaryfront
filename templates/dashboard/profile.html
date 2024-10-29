@@ -1,0 +1,47 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block conteudodashboard %}
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Log de atividades do usuário -->
+            <div class="col-md-3">
+                <div class="card">
+                <div class="card-header">
+                    Minhas Atividades
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                    <li class="list-group-item">Nova análise de processo: "Analise processo 1"</li>
+                    <li class="list-group-item">Tarefa completa: "Resumo do processo 1 gerado com sucesso!"</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <!-- Dados do usuario logado -->
+            <div class="col-md-9">    
+                <div class="container">
+                    <img src="static/assets/icons/person-circle.svg" alt="Profile Picture" class="mb-3 img-thumbnail rounded-circle" width="90" height="90">
+                    
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <h2>Update Profile</h2>
+                        
+                        <div class="mb-3">
+                            <label for="username_profile" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username_profile" name="username_profile" placeholder="Username" value="username" disabled>
+                            <label for="email_profile" class="form-label">E-mail</label>
+                            <input type="text" class="form-control" id="email_profile" name="email_profile" placeholder="Username" value="email user" disabled>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="profile_picture" class="form-label">Select Image</label>
+                            <input type="file" class="form-control" id="profile_picture" name="profile_picture" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Update Image</button>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

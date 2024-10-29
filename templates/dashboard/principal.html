@@ -1,73 +1,9 @@
-{% from "macros.html" import cabecalho %}
-{% extends "base.html" %}
-{% block title %} Login {% endblock %}
-    
-{% block content %}        
-{{ cabecalho() }}
+{% extends "dashboard/base_dashboard.html" %}
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="#"><strong>My Summary</strong></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Análises</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Buscar Processo</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Processos Analisados</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Pesquisar</a></li>
-                            <li><a class="dropdown-item" href="#">Meus Resumos</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Sobre</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="static/assets/icons/person-circle.svg" alt="e-mail usuaario" width="30" height="30" class="rounded-circle">
-                        Nome Usuário
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Configurações</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            </div>
-        </nav>
-
+{% block conteudodashboard %}
         <div class="container-fluid mt-4">
             <div class="row">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-
-        <div class="container-fluid mt-4">
-            <div class="alert alert-primary" role="alert">
-                Exemplo de mensagem de feedback para o usuário.
-            </div>
-        </div>
-
-        <div class="container-fluid mt-4">
-            <div class="row">
-
+                <!-- Log das atividades do usuário -->
                 <div class="col-md-3">
                     <div class="card">
                     <div class="card-header">
@@ -75,6 +11,7 @@
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
+                        <!-- Converter para uma lista de mensagens de logs do usuário -->
                         <li class="list-group-item">Nova análise de processo: "Analise processo 1"</li>
                         <li class="list-group-item">Tarefa completa: "Resumo do processo 1 gerado com sucesso!"</li>
                         </ul>
@@ -84,6 +21,7 @@
 
                 <div class="col-md-9">
                     <div class="row">
+                        <!-- Analises do processos -->
                         <div class="col">
                             <div class="card">
                                 <div class="card-body">
@@ -95,7 +33,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col">
                             <div class="card">
                                 <div class="card-body">
@@ -118,19 +55,19 @@
                                 </div>
                             </div>
                         </div>
-                    <div class="col-md-12 mt-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Buscar Processo</h5>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Pesquisa..." aria-label="Pesquisa">
-                                    <button class="btn btn-primary" type="button">Pesquisa</button>
+                        <!-- Buscar processo -->
+                        <div class="col-md-12 mt-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Buscar Processo</h5>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Pesquisa..." aria-label="Pesquisa">
+                                        <button class="btn btn-primary" type="button">Pesquisa</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    </div>
-
                 </div>
 
             </div>
