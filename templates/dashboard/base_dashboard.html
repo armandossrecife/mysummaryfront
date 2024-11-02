@@ -7,7 +7,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#"><strong>My Summary</strong></a>
+        <a class="navbar-brand" href="#"><strong>MySummary</strong></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,14 +16,14 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Análises</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Buscar Processo</a></li>
+                        <li><a class="dropdown-item" href="/buscar">Buscar Processo</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Processos Analisados</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Pesquisar</a></li>
-                        <li><a class="dropdown-item" href="#">Meus Resumos</a></li>
+                        <li><a class="dropdown-item" href="/resumo_processo">Meus Resumos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -54,7 +54,7 @@
         <div class="row">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{ breadcrumb_item_active }}</li>
                 </ol>
             </nav>

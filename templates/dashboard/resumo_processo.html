@@ -1,0 +1,161 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block conteudodashboard %}
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <!-- Log das atividades do usuário -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Minhas Atividades
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group">
+                            <!-- Converter para uma lista de mensagens de logs do usuário -->
+                            <li class="list-group-item">Nova análise de processo: "Analise processo 1"</li>
+                            <li class="list-group-item">Tarefa completa: "Resumo do processo 1 gerado com sucesso!"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="row">
+                        <!-- Detalhes do Processo -->
+                        <div class="col-md-12 mt-4">
+                            <div class="card">
+                                <div class="card-header">
+                                  Processo 23111.052861/2021-71
+                                </div>
+                                <div class="card-body">
+                      
+                                  <div class="row">
+                                      <div class="col-md-12 mt-4">
+                                          <a data-bs-target="#interessado" data-bs-toggle="collapse">Interessado</a>
+                                          <div id="interessado" class="collapse" aria-expanded="true">
+                                              <table class="table">
+                                                  <thead>
+                                                  <tr>
+                                                      <th>Tipo</th>
+                                                      <th>Identificador</th>
+                                                      <th>Nome</th>
+                                                  </tr>
+                                                  </thead>
+                                                  <tbody id="tableBodyInteressado"></tbody>
+                                              </table>
+                                              <script>
+                                                  const data = [{'Tipo':'Servidor', 'Identificador':'1886865', 'Nome':'ARMANDO SOARES SOUSA'}];
+                      
+                                                  const tableBody = document.querySelector('tbody');
+                      
+                                                  data.forEach(item => {
+                                                  const row = document.createElement('tr');
+                                                  row.innerHTML = `
+                                                      <tr>
+                                                      <td>${item.Tipo}</td>
+                                                      <td>${item.Identificador}</td>
+                                                      <td>${item.Nome}</td>
+                                                      </tr>
+                                                  `;
+                                                  tableBodyInteressado.appendChild(row);
+                                                  });
+                                              </script>
+                                          </div>
+                      
+                                          <script>
+                                            // Trigger the show event on page load
+                                            window.addEventListener('load', function() {
+                                              const collapseElement = document.getElementById('interessado');
+                                              const bsCollapse = new bootstrap.Collapse(collapseElement);
+                                              bsCollapse.show();
+                                            });
+                                          </script>
+                                      </div>
+                                  </div>
+                      
+                                  <div class="row">
+                                      <div class="col-md-12 mt04">
+                                          <a data-bs-target="#dadosgerais" data-bs-toggle="collapse">Dados Gerais</a>
+                                          <div id="dadosgerais" class="collapse">
+                                              <table class="table">
+                                                  <thead>
+                                                      <tr>
+                                                          <th>Propriedade</th>
+                                                          <th>Descrição</th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody id="tableBodyDadosGerais">
+                                                      <tr><td>Processo</td><td>23111.052861/2021-71 Processo Eletrônico</td></tr>                        
+                                                      <tr><td>Origem do Processo</td><td>Interno</td></tr>
+                                                      <tr><td>Data de Autuação</td><td>22/12/2021 11:24</td></tr>
+                                                      <tr><td>Usuário de Autuação</td><td>LUIS GUSTAVO DOS SANTOS VIANA</td></tr>
+                                                      <tr><td>Assunto do Processo</td><td>SOLICITACAO</td></tr>
+                                                      <tr><td>Assunto Detalhado</td><td>RENOVAÇÃO DE AFASTAMENTO PARA QUALIFICAÇÃO (DOUTORADO)</td></tr>
+                                                      <tr><td>Natureza do Processo</td><td>OSTENSIVO</td></tr>
+                                                      <tr><td>Unidade de Origem</td><td>DIVISAO DE PROTOCOLO E DOCUMENTACAO/PRAD (11.00.15.08.03)</td></tr>
+                                                      <tr><td>Status'<td>ARQUIVADO</td></td></tr>
+                                                      <tr><td>Data de Cadastro</td><td>22/12/2021</td></tr>
+                                                      <tr><td>Observação</td><td>''</td></tr>
+                                                  </tbody>
+                                              </table>
+                                              <script>
+                                                  const dadosGerais = [{
+                                                      'Processo':	'23111.052861/2021-71 Processo Eletrônico',
+                                                      'Origem do Processo':	'Interno',
+                                                      'Data de Autuação':	'22/12/2021 11:24',
+                                                      'Usuário de Autuação':	'LUIS GUSTAVO DOS SANTOS VIANA',
+                                                      'Assunto do Processo':	'SOLICITACAO',
+                                                      'Assunto Detalhado':	'RENOVAÇÃO DE AFASTAMENTO PARA QUALIFICAÇÃO (DOUTORADO)',
+                                                      'Natureza do Processo':	'OSTENSIVO',
+                                                      'Unidade de Origem':	'DIVISAO DE PROTOCOLO E DOCUMENTACAO/PRAD (11.00.15.08.03)',
+                                                      'Status':	'ARQUIVADO',
+                                                      'Data de Cadastro':	'22/12/2021',
+                                                      'Observação': ''
+                                                  }];
+                      
+                                                  const tableBodyDadosGerais = document.getElementById('tableBodyDadosGerais');
+                                                  
+                                              </script>
+                                          </div>
+                                      </div>
+                                  </div>
+                                   
+                                  <div class="row">
+                                    <div class="col-md-12 mt-4">
+                                        <a data-bs-target="#resumos" data-bs-toggle="collapse">Resumos</a>
+                                        <div id="resumos" class="collapse">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Resumo 1</h5>
+                                                <p class="card-text">O solicitante, Armando Soares Sousa, matriculado no Departamento de Computação da Universidade Federal do Piauí, solicita a prorrogação de seu afastamento para continuar o curso de doutorado em Ciência da Computação na Universidade Federal do Ceará. A solicitação inclui:
+                                                    * Concordância do chefe de departamento
+                                                    * Declaração da Universidade Federal do Ceará sobre os requisitos e carga horária do curso de doutorado
+                                                    * Concordância do coordenador do programa de pós-graduação em Ciência da Computação da UFC
+                                                    * Concordância do orientador
+                                                    * Atestados semestrais de frequência
+                                                    * Avaliações semestrais de desempenho
+                                                    * Termo de compromisso e responsabilidade
+                                                    * Relatórios semestrais de atividade
+                                                    * Atestado de matrícula
+                                                    * Declaração de matrícula
+                                                    * Histórico atualizado
+                                                    * Declaração de bolsa da FUNCAP (Fundação Cearense de Apoio ao Desenvolvimento Científico)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                
+                                </div>
+
+                                </div>
+                            </div>                      
+                        </div>
+                        <!-- Fim Detalhes do Processo-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+{% endblock %}

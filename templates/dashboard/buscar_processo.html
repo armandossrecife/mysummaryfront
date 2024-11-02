@@ -1,0 +1,80 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block conteudodashboard %}
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <!-- Log das atividades do usuário -->
+                <div class="col-md-3">
+                    <div class="card">
+                    <div class="card-header">
+                        Minhas Atividades
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                        <!-- Converter para uma lista de mensagens de logs do usuário -->
+                        <li class="list-group-item">Nova análise de processo: "Analise processo 1"</li>
+                        <li class="list-group-item">Tarefa completa: "Resumo do processo 1 gerado com sucesso!"</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="row">
+                        <!-- Buscar processo -->
+                        <div class="col-md-12 mt-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Buscar
+                                </div>
+                                <div class="card-body">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Pesquisa..." aria-label="Pesquisa">
+                                        <button class="btn btn-primary" type="button">Pesquisa</button>
+                                    </div>
+
+                                    <!-- Dados dos processos buscados -->
+                                    <div class="container mt-3">
+                                        <strong>Lista de Processos</strong>
+                                        <table class="table table-hover">
+                                            <thead>
+                                              <tr>
+                                                <th>Número</th>
+                                                <th>Descrição</th>
+                                                <th>Data de Abertura</th>
+                                                <th>Ações</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>1</td>
+                                                <td>X1</td>
+                                                <td>01/01/2024</td>
+                                                <td><a href="/detalhes_processo">[Detalhes]</a><a href="/resumo_processo">[Gerar Resumo]</a></td>
+                                              </tr>
+                                              <tr>
+                                                <td>2</td>
+                                                <td>X2</td>
+                                                <td>10/02/2024</td>
+                                                <td><a href="">[Detalhes]</a><a href="#">[Gerar Resumo]</a></td>
+                                              </tr>
+                                              <tr>
+                                                <td>3</td>
+                                                <td>X3</td>
+                                                <td>15/03/2024</td>
+                                                <td><a href="">[Detalhes]</a><a href="#">[Gerar Resumo]</a></td>
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- Fim dos Dados dos processos buscados -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+{% endblock %}

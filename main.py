@@ -43,6 +43,42 @@ def dashboard():
     return render_template('dashboard/principal.html', titulo=info_dashboard['titulo'], imagem_profile=info_dashboard['imagem'],
     nome_usuario=info_dashboard['nome'], breadcrumb_item_active=info_dashboard['breadcrumb'], mensagem_feedback=info_dashboard['mensagem'])
 
+@app.route('/buscar')
+def dashboard_buscar_processo():
+    info_dashboard = {
+        'titulo':"Dashboard",
+        'imagem':"static/assets/icons/person-circle.svg",
+        'nome':"armando",
+        'breadcrumb':"Buscar Processo",
+        'mensagem':"Esta é uma mensagem de feedback assim que o dashboard buscar processo é carregado."
+    }
+    return render_template('dashboard/buscar_processo.html', titulo=info_dashboard['titulo'], imagem_profile=info_dashboard['imagem'],
+    nome_usuario=info_dashboard['nome'], breadcrumb_item_active=info_dashboard['breadcrumb'], mensagem_feedback=info_dashboard['mensagem'])
+
+@app.route('/detalhes_processo')
+def dashboard_detalhes_processo():
+    info_dashboard = {
+        'titulo':"Dashboard",
+        'imagem':"static/assets/icons/person-circle.svg",
+        'nome':"armando",
+        'breadcrumb':"Detalhes Processo X1",
+        'mensagem':"Esta é uma mensagem de feedback assim que o dashboard detalhes de processo é carregado."
+    }
+    return render_template('dashboard/detalhes_processo.html', titulo=info_dashboard['titulo'], imagem_profile=info_dashboard['imagem'],
+    nome_usuario=info_dashboard['nome'], breadcrumb_item_active=info_dashboard['breadcrumb'], mensagem_feedback=info_dashboard['mensagem'])
+
+@app.route('/resumo_processo')
+def dashboard_resumo_processo():
+    info_dashboard = {
+        'titulo':"Dashboard",
+        'imagem':"static/assets/icons/person-circle.svg",
+        'nome':"armando",
+        'breadcrumb':"Resumo do Processo X1",
+        'mensagem':"Esta é uma mensagem de feedback assim que o dashboard desumo de processo é carregado."
+    }
+    return render_template('dashboard/resumo_processo.html', titulo=info_dashboard['titulo'], imagem_profile=info_dashboard['imagem'],
+    nome_usuario=info_dashboard['nome'], breadcrumb_item_active=info_dashboard['breadcrumb'], mensagem_feedback=info_dashboard['mensagem'])
+
 @app.route('/processo')
 def processo_selecionado():
     return render_template('processos/processo.html')
