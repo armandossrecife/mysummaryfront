@@ -1,0 +1,6 @@
+Você precisa definir o IP e porta da aplicação backend
+ * Serving Flask app 'main'
+ * Debug mode: off
+Carrega a aplicação
+Executa os testes automáticos do Selenium
+Arquivo 037395-2024-59.html criado com sucesso!

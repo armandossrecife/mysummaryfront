@@ -1,0 +1,26 @@
+1. Carregue a seguinte página (ok)
+https://www.sipac.ufpi.br/public/jsp/portal.jsf
+
+2. Clique em Processos (ok)
+
+3. Aguarde carregar o formulário de processos (ok)
+
+4. Selecione a opção Nome Interessado (ok)
+
+5. Preencha o nome do interessado (ok)
+
+6. Clique no botão "Consultar Processo" (ok)
+
+7. Aguarde 3 segundos (ok)
+
+8. Verifique se o formulário carregou testando se "Processos Encontrados" aparece na página de resposta (ok)
+
+9. Pesquise pelo link da primeira lupa (ok)
+
+10. Clique no link da primeira lupa (ok)
+
+11. Aguarde 5 segundos (ok)
+
+12. Verifique se aparece "Dados Gerais do Processo" na página de resposta (ok)
+
+13. Recupere todo o conteúdo da página corrente. (ok)
