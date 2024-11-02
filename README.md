@@ -79,3 +79,19 @@ Abra o browser: http://localhost:5000
 # D. Casos de Uso
 
 ![](docs/imagens/usecases.png)
+
+# E. Testes 
+
+[Testes Automáticos com o Selenium](https://github.com/my-prototypes/tflk/blob/desenvolvimento/docs/roteiro_selenium_web_driver.md)
+
+## Execução dos testes automáticos
+
+Para executar os testes de login e dashboard
+```bash
+python3 tests_ts_run.py
+```
+
+Para coletar os dados de um processo do SIPAC
+```bash
+python3 tests_ts_run_processo.py
+```
