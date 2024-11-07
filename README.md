@@ -11,6 +11,11 @@
 7. F7. Gerenciar Processos
 8. F8. Gerenciar Resumo de Processo
 
+## Exemplo de Telas
+- [Dashboard Principal](https://github.com/armandossrecife/mysummaryfront/blob/main/docs/imagens/dashboard_principal.png)
+- [Buscar/listar Processos](https://github.com/armandossrecife/mysummaryfront/blob/main/docs/imagens/dashboard_buscar_listar_processos.png)
+- [Dados do Processo e Resumo do Processo](https://github.com/armandossrecife/mysummaryfront/blob/main/docs/imagens/dashboard_processo.png)
+
 # B. Aspectos Técnicos
 
 - Uso do Flask para criar aplicações html dinâmicas
