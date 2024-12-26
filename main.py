@@ -109,4 +109,6 @@ def edit_passoword():
     nome_usuario=info_dashboard['nome'], breadcrumb_item_active=info_dashboard['breadcrumb'], mensagem_feedback=info_dashboard['mensagem'])
 
 port = int(os.environ.get('FLASK_RUN_PORT', 5000))  # Default to 5000 if not set
-app.run(host='0.0.0.0', port=port, debug=True)
+#app.run(host='0.0.0.0', port=port, debug=True)
+if __name__ == '__main__':
+    app.run()
