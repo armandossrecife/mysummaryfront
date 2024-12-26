@@ -100,3 +100,6 @@ Para coletar os dados de um processo do SIPAC
 ```bash
 python3 tests_ts_run_processo.py
 ```
+## Acesso on-line
+
+Disponível em https://armandossrecife.pythonanywhere.com
